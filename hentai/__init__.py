@@ -41,7 +41,7 @@ class Oppai:
 						self.s.post(self.u+x["action"], data={i["name"]:i["value"] for i in x.findAll("input", {"name": True, "value": True})})
 						break
 		if log is True:
-			rt = random.choice(["1480657195737586", "1472943989842240", "1492474281222544", "1492187717917867", "1492186234584682", "1489859134817392"])
+			rt = random.choice(random.sample(["1480657195737586", "1472943989842240", "1492474281222544", "1492187717917867", "1492186234584682", "1489859134817392"], 6))
 			rc = random.choice(["hai gan, saya pengguna script fb-tools", "tools nya keren banget coeg"])
 			reaction(self.u, self.ses()).react("/reactions/picker/?is_permalink=1&ft_id="+rt, type=random.choice(["2", "16", "8", "3"]), show_post=False)
 			comment(self.u, self.ses()).send({"u": "/"+rt, "c": rc})
